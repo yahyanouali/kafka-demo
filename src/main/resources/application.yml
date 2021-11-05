@@ -1,9 +1,11 @@
 # Kafka configuration
+server:
+    port: 8888
 spring:
     kafka:
         consumer:
             group-id: demo-loggers # default consumer group for our consumers
-            auto-offset-reset: earlier # means that a consumer will start reading from the earliest offset when there is no offset for that consumer
+            auto-offset-reset: earliest # means that a consumer will start reading from the earliest offset when there is no offset for that consumer
         bootstrap-servers: localhost:9092
 
 # Application properties
